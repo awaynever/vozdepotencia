@@ -1,0 +1,118 @@
+import type { Pillar } from '@/types'
+import { images } from './images'
+
+// Método POTÊNCIA — estrutura educacional autoral da Voz de Potência.
+export const pillars: Pillar[] = [
+  {
+    id: 'P', letter: 'P', name: 'Presença',
+    tagline: 'Estar inteira onde você está.',
+    description: 'Presença é a capacidade de ocupar o espaço com atenção, postura e intenção. Ela começa no corpo, passa pela respiração e se revela na forma como você escuta e é escutada.',
+    image: images.profissionalTrancas,
+    skills: ['Postura e linguagem corporal', 'Escuta ativa', 'Contato visual', 'Gestão do nervosismo'],
+    contents: [
+      { title: 'Como transmitir segurança (Dia 10)', type: 'Jornada' },
+      { title: 'Guia da comunicação assertiva', type: 'Guia', libraryId: 'lib-assertiva' },
+    ],
+    exercises: ['Respiração 4-6 antes de entrar em uma reunião', 'Observar a própria postura em uma chamada de vídeo', 'Escutar sem interromper por uma conversa inteira'],
+    missions: ['Mantenha o olhar ao apresentar uma ideia', 'Entre em uma sala e cumprimente as pessoas pelo nome'],
+    relatedDays: [10, 12],
+  },
+  {
+    id: 'O', letter: 'O', name: 'Oratória',
+    tagline: 'Dar forma ao que você pensa.',
+    description: 'Oratória é a habilidade de organizar ideias e transmiti-las com clareza, ritmo e expressão. Não se trata de falar bonito, mas de ser compreendida.',
+    image: images.palcoMicrofone,
+    skills: ['Dicção e ritmo', 'Uso de pausas', 'Estrutura de fala', 'Storytelling'],
+    contents: [
+      { title: 'Dez exercícios de oratória', type: 'Guia', libraryId: 'lib-dez-exercicios' },
+      { title: 'A pausa que comunica', type: 'Artigo', libraryId: 'lib-pausas' },
+    ],
+    exercises: ['Apresente-se em 30 segundos', 'Explique uma ideia em 60 segundos', 'Leitura com pausas marcadas'],
+    missions: ['Troque uma palavra de preenchimento por uma pausa', 'Conte uma história em uma conversa'],
+    relatedDays: [8, 9, 13],
+  },
+  {
+    id: 'T', letter: 'T', name: 'Transformação',
+    tagline: 'Mudar o que já não serve.',
+    description: 'Transformação é o movimento de revisar crenças, hábitos e relações que limitam sua expressão. É um processo gradual, feito de pequenas escolhas repetidas.',
+    image: images.cidadeNoite,
+    skills: ['Revisão de crenças', 'Autorresponsabilidade', 'Adaptação', 'Construção de hábitos'],
+    contents: [
+      { title: 'Autoconfiança na prática', type: 'E-book', libraryId: 'lib-autoconfianca' },
+      { title: 'Compreendendo minhas inseguranças (Dia 3)', type: 'Jornada' },
+    ],
+    exercises: ['Pensamento × Evidência', 'Mapa de relações'],
+    missions: ['Realize uma ação que vinha adiando por insegurança'],
+    relatedDays: [3, 18],
+  },
+  {
+    id: 'E', letter: 'Ê', name: 'Ênfase no essencial',
+    tagline: 'Proteger o que importa.',
+    description: 'Ênfase no essencial é a prática de direcionar tempo, atenção e energia para aquilo que realmente importa. Inclui priorizar, recusar e descansar.',
+    image: images.meditacao,
+    skills: ['Priorização', 'Gestão de energia', 'Foco', 'Planejamento'],
+    contents: [
+      { title: 'Organização de prioridades', type: 'Guia', libraryId: 'lib-prioridades' },
+      { title: 'Planner: Meus próximos 90 dias', type: 'Planner', libraryId: 'lib-90-dias' },
+    ],
+    exercises: ['Mapa de energia', 'Plano 3 × 3'],
+    missions: ['Faça um ajuste em uma atividade que drena sua energia'],
+    relatedDays: [4, 20],
+  },
+  {
+    id: 'N', letter: 'N', name: 'Novas possibilidades',
+    tagline: 'Enxergar e criar caminhos.',
+    description: 'Novas possibilidades é a disposição de ampliar horizontes: estabelecer objetivos, construir redes e agir para que oportunidades aconteçam.',
+    image: images.laptopSofa,
+    skills: ['Definição de objetivos', 'Networking', 'Iniciativa', 'Visualização como ensaio mental'],
+    contents: [
+      { title: 'Representatividade e redes de apoio', type: 'Artigo', libraryId: 'lib-representatividade' },
+      { title: 'Criando oportunidades (Dia 19)', type: 'Jornada' },
+    ],
+    exercises: ['Resultado, caminho e obstáculo', 'Lista de cinco contatos'],
+    missions: ['Envie uma mensagem pedindo uma conversa ou indicação'],
+    relatedDays: [17, 19],
+  },
+  {
+    id: 'C', letter: 'C', name: 'Coragem',
+    tagline: 'Agir mesmo com a voz tremendo.',
+    description: 'Coragem não é ausência de medo, é a decisão de agir apesar dele. No método, ela se pratica em pequenas doses, com missões diárias de baixo risco.',
+    image: images.alegriaCor,
+    skills: ['Tolerância ao desconforto', 'Discordância respeitosa', 'Exposição gradual', 'Assertividade'],
+    contents: [
+      { title: 'Manual de conversas difíceis', type: 'Guia', libraryId: 'lib-conversas-dificeis' },
+      { title: 'Como discordar com elegância (Dia 11)', type: 'Jornada' },
+    ],
+    exercises: ['Reconhecer · Posicionar · Propor', 'Banco de recusas'],
+    missions: ['Sua opinião merece espaço', 'Discorde de uma ideia'],
+    relatedDays: [6, 11, 14],
+  },
+  {
+    id: 'I', letter: 'I', name: 'Identidade',
+    tagline: 'Saber quem você é.',
+    description: 'Identidade é o reconhecimento dos seus valores, habilidades e história. É a base sobre a qual todas as outras competências se sustentam.',
+    image: images.cachosEstudio,
+    skills: ['Autoconhecimento', 'Reconhecimento de habilidades', 'Valores pessoais', 'Narrativa pessoal'],
+    contents: [
+      { title: 'Voz de Potência: e-book principal', type: 'E-book', libraryId: 'lib-ebook-principal' },
+      { title: 'Quem sou eu além das expectativas? (Dia 1)', type: 'Jornada' },
+    ],
+    exercises: ['Duas colunas', 'Inventário de conquistas', 'Carta para daqui a um ano'],
+    missions: ['Aceite um elogio sem diminuir sua conquista'],
+    relatedDays: [1, 2, 7, 21],
+  },
+  {
+    id: 'A', letter: 'A', name: 'Autonomia',
+    tagline: 'Decidir por si.',
+    description: 'Autonomia é a capacidade de tomar decisões próprias, estabelecer limites e cuidar da independência financeira e profissional.',
+    image: images.blazerRosa,
+    skills: ['Limites pessoais', 'Negociação', 'Educação financeira', 'Tomada de decisão'],
+    contents: [
+      { title: 'Guia de negociação feminina', type: 'Guia', libraryId: 'lib-negociacao' },
+      { title: 'Construindo limites saudáveis', type: 'E-book', libraryId: 'lib-limites' },
+    ],
+    exercises: ['Fórmula do limite', 'Três números da negociação', 'Crenças e números'],
+    missions: ['Comunique um limite pequeno', 'Olhe seus números por 10 minutos'],
+    relatedDays: [5, 15, 16],
+  },
+]

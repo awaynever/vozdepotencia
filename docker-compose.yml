@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: voz-de-potencia:latest
+    container_name: voz-de-potencia
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped

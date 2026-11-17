@@ -25,6 +25,30 @@ npm run preview    # serve o build (http://localhost:4173)
 > Para publicar o `dist/` em uma hospedagem estática, configure o fallback de SPA (todas as rotas → `index.html`).
 > Sem fallback, use `npm run build:static` (rotas com `#/`, caminhos relativos). Para ambientes embutidos em iframe, use `npm run build:embed` (navegação em memória).
 
+## Executar com Docker
+
+Requisitos: Docker 24+ (com Docker Compose v2).
+
+```bash
+docker compose up -d --build     # http://localhost:8080
+docker compose logs -f           # acompanhar logs
+docker compose down              # parar
+```
+
+Para usar outra porta: `PORT=3000 docker compose up -d --build`.
+
+Sem Compose:
+
+```bash
+docker build -t voz-de-potencia .
+docker run -d --name voz-de-potencia -p 8080:80 voz-de-potencia
+```
+
+Como funciona:
+- `Dockerfile` multi-stage: a etapa `node:22-bookworm-slim` roda `npm ci` + `npm run build`; a etapa final é `nginx:1.27-alpine` servindo apenas o `dist/` (imagem leve, sem Node em produção).
+- `docker/nginx.conf`: fallback de SPA (todas as rotas → `index.html`), cache longo para `/assets` (arquivos com hash), gzip, cabeçalhos de segurança e endpoint `/healthz` usado pelo `HEALTHCHECK`.
+- A gravação de voz (microfone) exige contexto seguro: funciona em `localhost`; em servidor remoto, publique atrás de HTTPS (proxy reverso como Traefik, Caddy ou Nginx com TLS).
+
 ## Rotas principais
 
 | Rota | Tela |
